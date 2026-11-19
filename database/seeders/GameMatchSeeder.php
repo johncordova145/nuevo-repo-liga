@@ -22,14 +22,17 @@ class GameMatchSeeder extends Seeder
 
         $teamModels = [];
         foreach ($teamsData as $data) {
-            $teamModels[] = Team::firstOrCreate(['code' => $data['code']], $data);
+            $teamModels[] = Team::firstOrCreate(
+                ['name' => $data['name']],
+                $data
+            );
         }
 
         GameMatch::truncate();
 
         $startDate = Carbon::create(2026, 10, 1);
         $endDate = Carbon::create(2026, 10, 31);
-        $categories = ['mayores', 'u19', 'u14']; // Categorías disponibles
+        $categories = ['mayores', 'u19', 'u14'];
 
         while ($startDate <= $endDate) {
             $matchesPerDay = rand(1, 3);
@@ -49,7 +52,7 @@ class GameMatchSeeder extends Seeder
                     'home_score'   => $isFinished ? rand(50, 90) : null,
                     'away_score'   => $isFinished ? rand(50, 90) : null,
                     'status'       => $isFinished ? 'finished' : 'scheduled',
-                    'category'     => $categories[array_rand($categories)], // Asignar categoría aleatoria
+                    
                 ]);
             }
 

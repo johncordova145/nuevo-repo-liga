@@ -14,7 +14,7 @@ class MacrorregionalSeeder extends Seeder
         $teamsData = [
             ['name' => 'Ayacucho', 'code' => 'AYA', 'city' => 'Ayacucho', 'category' => 'B (13-14 años)'],
             ['name' => 'Madre de Dios', 'code' => 'MDD', 'city' => 'Puerto Maldonado', 'category' => 'B (13-14 años)'],
-            ['name' => 'Cusco', 'code' => 'CUS', 'city' => 'Cusco', 'category' => 'B (13-14 años)'],
+            ['name' => 'Cusco', 'code' => 'CUZ', 'city' => 'Cusco', 'category' => 'B (13-14 años)'],
             ['name' => 'Apurímac', 'code' => 'APU', 'city' => 'Abancay', 'category' => 'B (13-14 años)'],
         ];
 

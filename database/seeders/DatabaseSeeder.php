@@ -11,9 +11,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             TeamSeeder::class,
             GameMatchSeeder::class,
+            MacrorregionalSeeder::class,
         ]);
     }
+    
 }
-$this->call([
-    MacrorregionalSeeder::class,
-]);
